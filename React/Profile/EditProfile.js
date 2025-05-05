@@ -3,7 +3,9 @@ import React, { useState } from "react";
 export default function EditProfile() {
   const [profile, setProfile] = useState({}); //empty object
 
+  //event handler to handle input fields
   const handleChange = ({ target }) => {
+    //name is the attribute of input tag and value is the user input
     const {name, value} = target;
     setProfile((prevProfile) => ({ //wrap () before {} because we return object directly
       ...prevProfile,
@@ -11,9 +13,11 @@ export default function EditProfile() {
     }))
   };
 
+  //event handler to handle user submit
   const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(JSON.stringify(profile, '', 2));
+    event.preventDefault(); //page reload
+    //convert profile object into formatted string
+    alert(JSON.stringify(profile, '', 2)); //2 is used for indent using 2 spaces
   };
 
   return (
