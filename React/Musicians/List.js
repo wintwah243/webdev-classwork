@@ -3,7 +3,7 @@ import React from 'react'
 function List(props) {
     //get type from List in App component
     let titleText = `Favorite ${props.type}`;
-    if(props.children instanceof Array) {
+    if(props.children instanceof Array) { //check like if there's multiple li tag
         titleText += 's';
     }
     return (
