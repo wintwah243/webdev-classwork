@@ -17,7 +17,7 @@ export default function GroceryCart() {
   const removeItem = (targetIndex) => {  //take removeItme's index argument 
     setCart((prev) => {
       return prev.filter((item, index) => //use filter method to create new array (filter can take two arguments)
-        index != targetIndex //if item's index and removedItem's index is not equal, we will create a new array
+        index != targetIndex //we will create a new array by removing targetIndex
       )
     })
   };
