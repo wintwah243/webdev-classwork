@@ -8,7 +8,7 @@ const container = document.getElementById('app');
 //create images array
 const images = [];
 
-//use for in loop for array looping
+//use for in loop for object array looping
 for(const animal in animals){
   //add new image item to the existing array
   images.push(
