@@ -18,7 +18,7 @@ const handleFailure = (rejectedValue) => {
   console.log(rejectedValue);
 };
 
-checkInventory(order).then(handleSuccess, handleFailure);
+checkInventory(order).then(handleSuccess).catch(handleFailure);
 
 
 
